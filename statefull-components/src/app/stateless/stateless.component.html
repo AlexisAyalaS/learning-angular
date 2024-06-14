@@ -1,0 +1,20 @@
+<div class="card">
+  <div class="card-image">
+    <figure class="image">
+      <img src="assets/items/{{item.imagen}}" alt="" />
+    </figure>
+    <div class="card-content">
+      <strong>{{ item.producto }}</strong
+      ><br />
+      <p>{{ item.descripcion }}</p>
+      <button
+        class="button is-fullwidth is-small"
+        (click)="seleccionarItem(item)"
+        [disabled]="isDisabled()"
+        [ngClass]="{'is-danger': !isDisabled()}"
+      >
+        {{ textobtn }}
+      </button>
+    </div>
+  </div>
+</div>
